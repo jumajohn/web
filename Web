@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+    td{
+width: 60px;
+height: 60px;
+background-color: lightsteelblue;
+border-radius: 20px;
+text-align: center;
+font-size: 40px;
+font-weight: bold;
+
+
+    }
+    table{
+        background-color:darkmagenta;
+        border: 10px solid teal;
+        
+        border-spacing:5px;
+        
+    }
+    #display{
+        text-align: left;
+       background-color: white;
+    }
+    
+    #one,#two,#thr,#fou,#fiv,#six,#sev,#eig,#nin,#zer{
+        background-color: teal;
+
+    }
+    #one:hover,#two:hover,#thr:hover,#fou:hover,#fiv:hover,#six:hover,#sev:hover,#eig:hover,#nin:hover,#zer:hover{
+        background-color:blue;
+
+    }
+
+    #cle:hover,#del:hover{
+        background-color: cyan;
+    }
+#div:hover,#mul:hover,#plu:hover,#min:hover,#equ:hover,#neg:hover,#dot:hover{
+    background-color:lawngreen;
+}
+
+
+    #cle,#del{
+        background-color: red;
+    }
+    
+    
+    </style>
+</head>
+<body>
+  <table>
+<tr>
+    <td colspan="5" id="display"></td>
+</tr>
+<tr>
+    <td></td>
+    <td id="cle">ce</td>
+    <td></td>
+    <td id="del">del</td>
+    <td id="div">/</td>
+</tr>
+
+
+<tr>
+    <td></td>
+    <td id="one">1</td>
+    <td id="two">2</td>
+    <td id="thr">3</td>
+    <td id="mul">*</td>
+</tr>
+
+
+<tr>
+    <td></td>
+    <td id="fou">4</td>
+    <td id="fiv">5</td>
+    <td id="six">6</td>
+    <td id="plu">+</td>
+</tr>
+
+
+<tr>
+    <td></td>
+    <td id="sev">7</td>
+    <td id="eig">8</td>
+    <td id="nin">9</td>
+    <td id="min">-</td>
+</tr>
+
+
+<tr>
+    <td></td>
+    <td id="neg">-</td>
+    <td id="zer">0</td>
+    <td id="dot">.</td>
+    <td id="equ">=</td>
+</tr>
+
+  </table>
+  
+  <script type="text/javascript">
+
+var isp=false;
+document.querySelector("#one").addEventListener("click",function(){document.querySelector("#display").textContent+=1});
+document.querySelector("#two").addEventListener("click",function(){document.querySelector("#display").textContent+=2});
+document.querySelector("#thr").addEventListener("click",function(){document.querySelector("#display").textContent+=3});
+document.querySelector("#fou").addEventListener("click",function(){document.querySelector("#display").textContent+=4});
+document.querySelector("#fiv").addEventListener("click",function(){document.querySelector("#display").textContent+=5});
+document.querySelector("#six").addEventListener("click",function(){document.querySelector("#display").textContent+=6});
+document.querySelector("#sev").addEventListener("click",function(){document.querySelector("#display").textContent+=7});
+document.querySelector("#eig").addEventListener("click",function(){document.querySelector("#display").textContent+=8});
+document.querySelector("#nin").addEventListener("click",function(){document.querySelector("#display").textContent+=9});
+document.querySelector("#zer").addEventListener("click",function(){document.querySelector("#display").textContent+=0});
+document.querySelector("#neg").addEventListener("click",function(){document.querySelector("#display").textContent+="-"});
+document.querySelector("#dot").addEventListener("click",function(){document.querySelector("#display").textContent+="."});
+document.querySelector("#div").addEventListener("click",function(){document.querySelector("#display").textContent+="/"});
+document.querySelector("#mul").addEventListener("click",function(){document.querySelector("#display").textContent+="*"});
+document.querySelector("#plu").addEventListener("click",function(){document.querySelector("#display").textContent+="+"});
+document.querySelector("#min").addEventListener("click",function(){document.querySelector("#display").textContent+="-"});
+document.querySelector("#cle").addEventListener("click",function(){document.querySelector("#display").textContent=""});
+document.querySelector("#del").addEventListener("click",function(){document.querySelector("#display").textContent=document.querySelector("#display").textContent.substring(0,document.querySelector("#display").textContent.length-1)});
+document.querySelector("#equ").addEventListener("click",function(){document.querySelector("#display").textContent=(eval( document.querySelector("#display").textContent))});
+setInterval(function(){if(isp){document.querySelector("table").style.backgroundColor="green";}else{document.querySelector("table").style.backgroundColor="purple";}isp= !isp; },100);
+ 
+</script>
+</body>
+</html>
